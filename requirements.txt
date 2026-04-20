@@ -9,3 +9,4 @@ fastapi
 uvicorn
 python-multipart
 requests==2.32.3
+openpyxl

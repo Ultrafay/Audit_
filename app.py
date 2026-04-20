@@ -8,6 +8,7 @@ import uuid
 from pathlib import Path
 import ocr_engine
 from fastapi.middleware.cors import CORSMiddleware
+from routers import batch
 
 # ── Drive Processor (lazy init) ──────────────────────────────
 
@@ -52,6 +53,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(batch.router, prefix="/api")
 
 # Create directories if they don't exist
 UPLOAD_DIR = Path("uploads")
