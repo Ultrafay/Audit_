@@ -1,0 +1,11 @@
+pdf2image
+numpy
+openai
+google-api-python-client
+google-auth
+pydantic
+python-dotenv
+fastapi
+uvicorn
+python-multipart
+requests==2.32.3
